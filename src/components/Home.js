@@ -96,7 +96,7 @@ class Home extends Component {
                     <div className="col-sm-2"></div>
 
                 </div>
-                {itemList.length > 0 ?
+                {itemList && itemList.length > 0 ?
                     <div className="row wrapper">
                         <div className="col-sm-2"></div>
                         <div className="col-sm-8 mainData">
