@@ -1,11 +1,10 @@
 import _ from 'lodash';
 
 let initialState = { 
-  todolist: JSON.parse(localStorage.getItem('todolist')) 
+  todolist: JSON.parse(localStorage.getItem('todolist'))?JSON.parse(localStorage.getItem('todolist')):[] 
 };
 
 export default function (state = initialState, action) {
-  console.log(action);
   switch (action.type) {
     case 'ADD_TODO':
       {

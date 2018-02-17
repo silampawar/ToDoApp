@@ -23,27 +23,19 @@ class Home extends Component {
             alert('Enter text!!');
         }
         this.input.value = '';
-        //localStorage.setItem('todolist', JSON.stringify(this.props.todolist));
     }
 
     handleState(text, updatedState) {
-        // event.preventDefault();
-        console.log('in handle state: ' + text);
         this.props.updateItem(text, updatedState);
-        //localStorage.setItem('todolist', JSON.stringify(this.props.todolist));
     }
 
 
     handleDelete(text) {
-        console.log('in handle delete: ' + text);
         this.props.deleteItem(text);
-        // localStorage.setItem('todolist', JSON.stringify(this.props.todolist));
     }
 
     filterByState(filter) {
-        console.log('in handle filter: ' + filter);
         this.props.updateFilter(filter);
-        // localStorage.setItem('todolist', JSON.stringify(this.props.todolist));
     }
 
     displayTodoList() {
@@ -104,7 +96,7 @@ class Home extends Component {
                                 <p className="mb-1">Here are your todos!!</p>
                                 <div><Link to="" onClick={()=>this.filterByState(null)} >Show all</Link> | <Link to="" onClick={()=>this.filterByState('C')}>Show only completed items</Link> | <Link to="" onClick={()=>this.filterByState('I')}>Show only incomplete items</Link></div>
                             </div>
-                            <div class="list-group">
+                            <div className="list-group">
                                 {this.displayTodoList()}
                             </div>
                         </div>
