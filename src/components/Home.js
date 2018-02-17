@@ -52,7 +52,7 @@ class Home extends Component {
             itemList =  _.filter(itemList, {'currentState':this.props.filterByState})
         }
 
-        const list = itemList.length>0 ? _.orderBy(itemList,'addedOn','desc').map((todo, index) => (
+        const list = itemList && itemList.length>0 ? _.orderBy(itemList,'addedOn','desc').map((todo, index) => (
 
 
             <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
