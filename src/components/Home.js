@@ -73,15 +73,16 @@ class Home extends Component {
 
         return (
             <div className="container">
-                <div className="row wrapper">
+                <div className="row wrapper textAlign">
                     <div className="col-sm-2"></div>
                     <div className="col-sm-8 mainData">
+                    <div className="topSpace"></div>
                         <form className="form-group" onSubmit={this.handleSubmit}>
                             <input type="text" ref={(input) => this.input = input}
                                 placeholder="Enter action item here" name="todoText"
-                                className="form-control wrapper" />
+                                className="form-control textBoxWrapper" />
                             {this.props.error === true ? <div className="alert alert-danger">Item already present in the list</div> : <div></div>}
-                            <button className="btn btn-primary">Submit</button>
+                            <button className="btn btn-primary buttonWrapper">Submit</button>
                         </form>
 
                     </div>

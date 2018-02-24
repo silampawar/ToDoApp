@@ -7,7 +7,7 @@
 
 .App-header {
   background-color: #222;
-  height: 162px;
+  /*height: 162px;*/
   padding: 20px;
   color: white;
   text-align: center;
@@ -31,6 +31,29 @@
   margin-bottom: 20px;
 }
 
+.topSpace{
+  padding-top:20px;
+}
+.textBoxWrapper{
+  margin-bottom: 20px;
+}
+
+.textAlign{
+  text-align: center;
+}
+
+@media (max-width: 468px) {
+  .buttonWrapper{
+    margin-bottom: 20px;
+  }
+  .wrapper{
+    margin-top:0px;
+    margin-bottom: 20px;
+  }
+}
+
+
+
 .mainData{
   background-color:#eae9e7;
  }
@@ -52,10 +75,8 @@
  }
  
 .footer{
-  background: #eee;
+  background: #291f1f;
   text-align: center;
   font:black;
   line-height: 1.em;
-
-
 }
